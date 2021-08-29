@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1>Weather Dashboard:</h1>
+    </div>
+
+    <!-- search city -->
+    <div class="container">
+        <div class="container">
+            <h2>Search for a City:</h2>
+            <div class="input-group">
+                <input id="search-input" type="search" class="form-control rounded" placeholder="Search City"
+                    aria-label="Search" aria-describedby="search-addon" />
+                <button id="search-btn" type="button" class="btn btn-outline-primary">search</button>
+            </div>
+        </div>
+        <br>
+        <!-- Current day weather  -->
+        <div class="container display border border-primary">
+            <h2 id="user-city"><img id="current-img" src="" alt=""></h2>
+            <p id="user-temp"></p>
+            <p id="user-wind"></p>
+            <p id="user-humid"></p>
+            <p id="user-uv"></p>
+        </div>
+        <br>
+        <!--  5 day forecast -->
+        <div class="container border border-primary">
+            <h2>5-Day Forecast</h2>
+            <div class="container">
+                <div class="row">
+                  <div class="col-md d-flex justify-content-around">
+                    <h2 id="day1"><img class="forecast-img1" src="" alt=""></h2>
+                    <img src="">
+                    <p class="temperature" ></p>
+                    <p class="wind"></p>
+                    <p class="humidity"></p>
+                  </div>
+                  <div class="col-md d-flex justify-content-around">
+                    <h2 id="day2"><img class="forecast-img2" src="" alt=""></h2>
+                    <img src="">
+                    <p class="temperature" ></p>
+                    <p class="wind"></p>
+                    <p class="humidity"></p>
+                  </div>
+                  <div class="col-md d-flex justify-content-around">
+                    <h2 id="day3"><img class="forecast-img3" src="" alt=""></h2>
+                    <img src="">
+                    <p class="temperature" ></p>
+                    <p class="wind"></p>
+                    <p class="humidity"></p>
+                  </div>
+                  <div class="col-md d-flex justify-content-around">
+                    <h2 id="day4"><img class="forecast-img4" src="" alt=""></h2>
+                    <img src="">
+                    <p class="temperature" ></p>
+                    <p class="wind"></p>
+                    <p class="humidity"></p>
+                  </div>
+                  <div class="col-md d-flex justify-content-around">
+                    <h2 id="day5"><img class="forecast-img5" src="" alt=""></h2>
+                    <img src="">
+                    <p class="temperature" ></p>
+                    <p class="wind"></p>
+                    <p class="humidity"></p>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./assets/Javascript/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
