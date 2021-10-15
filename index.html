@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Title</title>
+    <title>Weather Dashboard</title>
 </head>
 
 <body>
@@ -18,7 +18,20 @@
     </div>
 
     <!-- search city -->
-    <div class="container">
+
+    <div class="col-sm-12 col-lg-3">
+      <form id="city-name">
+          <label for="city"><h4>Search for a City:</h4></label>
+          <input id="city-input" type="text" name="city-name" placeholder="Enter City" class="input-group-text bg-white w-100">            
+          <button type="submit" class="btn btn-primary w-100 mt-3">Search</button>
+      </form>
+      <hr>
+      <div id="past-searches"></div>
+  </div>
+
+
+
+    <!-- <div class="container">
         <div class="container">
             <h2>Search for a City:</h2>
             <div class="input-group">
@@ -27,7 +40,7 @@
                 <button id="search-btn" type="button" class="btn btn-outline-primary">search</button>
             </div>
         </div>
-        <br>
+        <br> -->
         <!-- Current day weather  -->
         <div class="container display border border-primary">
             <h2 id="user-city"><img id="current-img" src="" alt=""></h2>
@@ -38,58 +51,7 @@
         </div>
         <br>
         <!--  5 day forecast -->
-        <div class="container border border-primary">
-            <h2>5-Day Forecast</h2>
-            <div class="container">
-                <div class="row">
-                  <div class="col-md d-flex justify-content-around">
-                    <h2 id="day1"><img class="forecast-img1" src="" alt=""></h2>
-                    <img src="">
-                    <p class="temperature" ></p>
-                    <p class="wind"></p>
-                    <p class="humidity"></p>
-                  </div>
-                  <div class="col-md d-flex justify-content-around">
-                    <h2 id="day2"><img class="forecast-img2" src="" alt=""></h2>
-                    <img src="">
-                    <p class="temperature" ></p>
-                    <p class="wind"></p>
-                    <p class="humidity"></p>
-                  </div>
-                  <div class="col-md d-flex justify-content-around">
-                    <h2 id="day3"><img class="forecast-img3" src="" alt=""></h2>
-                    <img src="">
-                    <p class="temperature" ></p>
-                    <p class="wind"></p>
-                    <p class="humidity"></p>
-                  </div>
-                  <div class="col-md d-flex justify-content-around">
-                    <h2 id="day4"><img class="forecast-img4" src="" alt=""></h2>
-                    <img src="">
-                    <p class="temperature" ></p>
-                    <p class="wind"></p>
-                    <p class="humidity"></p>
-                  </div>
-                  <div class="col-md d-flex justify-content-around">
-                    <h2 id="day5"><img class="forecast-img5" src="" alt=""></h2>
-                    <img src="">
-                    <p class="temperature" ></p>
-                    <p class="wind"></p>
-                    <p class="humidity"></p>
-                  </div>
-                </div>
-              </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
+        
 
 
 

@@ -68,6 +68,17 @@ function showWeatherData(data) {
         weatherOutput(data);
         // fiveDayForecast(data);
 
+        // for(i = 0; i < 5; i++) {
+        //     var day = data.daily[i];
+        //     console.log(data.daily[i])
+        //     day.forEach(day => {
+        //     var dayContainer = document.createElement('div.container');
+        //     var dayRow =  document.createElement('div.row');
+
+
+        //     })
+        // }
+
     })
 }
 
