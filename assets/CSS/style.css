@@ -1,0 +1,47 @@
+body {
+    width: 100%;
+}
+
+.mx-2 {
+    background-color: #007bff;
+    color: white;
+}
+
+
+li {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+
+.uv-low {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.uv-moderate {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+.uv-high {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+}
+
+.uv-veryhigh {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.uv-extreme {
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
