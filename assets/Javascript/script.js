@@ -1,12 +1,39 @@
-const ApiKey = "73eee7d40a8bca02f06afa438e49bb05";
-var searchBtn = document.getElementById("search-btn");
-var citySearchInput = document.getElementById("search-input");
-var cityName = document.getElementById("user-city");
-var cityTemp = document.getElementById("user-temp");
-var cityWind = document.getElementById("user-wind");
-var cityHumid = document.getElementById("user-humid");
-var cityUV = document.getElementById("user-uv");
-var weatherIcon = document.getElementById("current-img");
+const APIKEY = "73eee7d40a8bca02f06afa438e49bb05";
+var CURRENTDAY = moment().format("(MM/DD/YYYY");
+var cityFormEl = $("#city-name");
+var cityInputEl = $("#city-input");
+var cityDisplayEl = $("#city-display");
+var tempOutput = $("#temp-output");
+var windOutput = $("#wind-output");
+var humidityOutput = $("#humidity-output");
+var uvOutput = $("#uv-output");
+var pastSearches = $("#past-searches");
+
+// search history
+var viewSearchHistory = localStorage.getItem("viewSearchHistory");
+if (!viewSearchHistory){
+var history = [];
+}
+else {
+    var history = [];
+    history = JSON.parse(viewSearchHistory);
+}
+
+if (history.length >= 1) {
+    for (let i=0; i < history.length; i++) {
+        var multiSearchBtn = $("<button>");
+        multiSearchBtn.addClass("init-button btn btn-secondary w-100 my-2");
+        multiSearchBtn.text(history[i]);
+        pastSearches.append(multiSearchBtn);
+    }
+}
+var initButton = $(".init-button");
+
+
+
+
+
+
 
 
 function weatherOutput(data) {
