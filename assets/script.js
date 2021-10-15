@@ -1,3 +1,6 @@
+$(document).ready(function () {
+
+
 const APIKEY = "73eee7d40a8bca02f06afa438e49bb05";
 var CURRENTDAY = moment().format("(MM/DD/YYYY");
 var cityFormEl = $("#city-name");
@@ -13,7 +16,8 @@ var pastSearches = $("#past-searches");
 var viewSearchHistory = localStorage.getItem("viewSearchHistory");
 if (!viewSearchHistory){
 var history = [];
-} else {
+} 
+else {
     var history = [];
     history = JSON.parse(viewSearchHistory);
 }
@@ -26,6 +30,7 @@ if (history.length >= 1) {
         pastSearches.append(multiSearchBtn);
     }
 }
+
 var initButton = $(".init-button");
 
 // 5 day forecast day
@@ -38,18 +43,18 @@ var day5 = $("#day5");
 function createButton(selectedCity) {
     // this fuction will be used to create a button which can be pressed and searched again.
     var searchHistory = JSON.parse(localStorage.getItem("searchHistory"));
-    // console.log(searchHistory);
-    // console.log($.inArray(selectedCity,searchHistory));
+    console.log(searchHistory);
+    console.log($.inArray(selectedCity,searchHistory));
     var searchCityBtn = $("<button>");
 
     if ($.inArray(selectedCity,searchHistory) == -1) {
-        // console.log(searchCityBtn);
+        console.log(searchCityBtn);
 
         searchCityBtn.text(selectedCity);
         searchCityBtn.addClass("btn btn-secondary w-100 my-2");
         pastSearches.append(searchCityBtn);
         history.push(selectedCity);
-        // console.log(history);
+        console.log(history);
 
         localStorage.setItem("searchHistory",JSON.stringify(history));
     }
@@ -64,8 +69,8 @@ function createButton(selectedCity) {
 
 function displayForecast(secondApiCallData){
     var uvIndexData = Math.round(secondApiCallData.current.uvi);
-    // console.log(uvIndexData);
-    // console.log(typeof uvIndexData);
+    console.log(uvIndexData);
+    console.log(typeof uvIndexData);
     uvOutput.text(uvIndexData);
     uvOutput.removeClass();
 
@@ -241,7 +246,7 @@ initButton.on("click", function(){
     cityDisplayEl.text(cityName + " " + CURRENTDAY);
 })
 
-// })
+})
 
 
 
